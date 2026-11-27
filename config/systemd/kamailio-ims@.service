@@ -1,0 +1,15 @@
+[Unit]
+Description=Kamailio IMS %i
+After=network-online.target mariadb.service named.service redis-server.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=kamailio
+Group=kamailio
+RuntimeDirectory=kamailio_%i
+ExecStart=/usr/local/sbin/kamailio -DD -E -f /etc/kamailio_%i/kamailio.cfg -P /run/kamailio_%i/kamailio_%i.pid
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

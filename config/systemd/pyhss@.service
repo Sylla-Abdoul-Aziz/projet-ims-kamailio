@@ -1,0 +1,15 @@
+[Unit]
+Description=PyHSS %i
+After=network-online.target redis-server.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=barry
+WorkingDirectory=/opt/pyhss/services
+ExecStart=/opt/pyhss/.venv/bin/python3 %iService.py
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
