@@ -3,7 +3,7 @@
 Projet du module **Réseaux Télécoms Multiservices** — Master Réseaux et Télécommunications, ESMT.
 Auteur : **Sylla Abdoul Aziz**
 
-Réalisation : du 11 au 22 novembre 2026 — publication sur GitHub : 27 novembre 2026.
+
 
 ## Objectif
 
